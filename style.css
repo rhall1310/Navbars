@@ -14,8 +14,16 @@ header {
     justify-content: space-between;
 }
 
-#toggle {
-    display: none;
+#toggler {
+    position: fixed;
+    right: 0;
+    visibility: hidden;
+    cursor: pointer;
+    width:30px;
+    height:30px;
+    background:white;
+    border-radius:5px;
+    border:2px solid #555;
 }
 
 nav {
@@ -49,9 +57,9 @@ nav ul a {
 .dropdown {
   background: #ddd;
   height: 0;
-  opacity: 0;
+  overflow: hidden;
   position: absolute;
-  transition: all .5s ease;
+  transition: height .5s ease-in;
   visibility: hidden;
   display: flex;
   flex-direction: column;
@@ -62,7 +70,6 @@ nav ul a {
 
 .parent:hover .dropdown {
     height: 200px;
-    opacity: 1;
     transform: translateY(0);
     visibility: visible;
   }
@@ -73,13 +80,34 @@ nav ul a {
       background-color: rgb(173, 230, 182);
       flex-direction: column;
     }
+
+    #toggler {
+       visibility: visible;
+    }
+    
     nav {
         visibility: hidden;
         height: 0;
-        transition: all .5s ease;
+        transition: height .5s ease-in;
         position: absolute;
         
     }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    nav ul li{
+        
+        width: 100%;
+    }
+    .parent:hover .dropdown {
+        height: 200px;
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        position: relative;
+      }
     #toggler:checked ~ nav {
         visibility: visible;
         transform: translateY(0);
@@ -87,4 +115,6 @@ nav ul a {
         position: relative;
         
     }
+
+    
 }
