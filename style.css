@@ -14,17 +14,52 @@ header {
     justify-content: space-between;
 }
 
+.logo a {
+    text-decoration: none;
+    display: flex;
+    color: inherit;
+}
+
 #toggler {
     position: fixed;
-    right: 0;
+    right: 1em;
+    top: 20px;
     visibility: hidden;
     cursor: pointer;
-    width:30px;
-    height:30px;
+    width: 50px;
+    height: 50px;
     background:white;
     border-radius:5px;
     border:2px solid #555;
+    z-index: 3;
+    opacity: 0;
+    padding: 0;
+        
 }
+
+.hamburger {
+    position: absolute;
+    top: 4em;
+    right: 2em;
+    margin-left: -2em;
+    margin-top: -45px;
+    width: 2em;
+    height: 45px;
+    z-index: 2;
+    visibility: hidden;
+  }
+  
+  .hamburger div {
+    position: relative;
+    width: 3em;
+    height: 7px;
+    border-radius: 3px;
+    background-color: #2b8bf8;
+    margin-top: 8px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+
 
 nav {
     display: flex;
@@ -47,6 +82,13 @@ nav ul {
 
 nav ul a {
     text-decoration: none;
+    color: inherit;
+}
+
+nav ul a:hover {
+    text-decoration: underline overline;
+    color: blue;
+    
 }
 
 .parent {
@@ -68,6 +110,10 @@ nav ul a {
   width: 100%;
 }
 
+.dropdown li {
+    padding: 15px;
+}
+
 .parent:hover .dropdown {
     height: 200px;
     transform: translateY(0);
@@ -77,14 +123,31 @@ nav ul a {
 
   @media only screen and (max-width: 600px) {
     header {
-      background-color: rgb(173, 230, 182);
+      
       flex-direction: column;
     }
 
     #toggler {
        visibility: visible;
     }
-    
+
+    .hamburger {
+        visibility: visible;
+    }
+
+    #toggler:checked + .hamburger .top-bun {
+        transform: rotate(-45deg);
+        margin-top: 25px;
+      }
+      #toggler:checked  + .hamburger .bottom-bun {
+        opacity: 0;
+        transform: rotate(45deg);
+      }
+      #toggler:checked  + .hamburger .meat {
+        transform: rotate(45deg);
+        margin-top: -7px;
+      }
+   
     nav {
         visibility: hidden;
         height: 0;
@@ -102,19 +165,41 @@ nav ul a {
         width: 100%;
     }
     .parent:hover .dropdown {
-        height: 200px;
+        height: 150px;
         opacity: 1;
         transform: translateY(0);
         visibility: visible;
         position: relative;
       }
+
+    .parent:hover #nav {
+        height: 400px;
+        transform: translateY(0);
+    }
+
     #toggler:checked ~ nav {
         visibility: visible;
         transform: translateY(0);
-        height: 200px;
+        height: 150px;
         position: relative;
         
     }
 
+    #toggler:checked ~ #close {
+        visibility: visible;
+    }
+
+    #toggler:checked ~ #open {
+        visibility: hidden;
+    }
+
     
 }
+
+
+
+
+
+
+  
+  
