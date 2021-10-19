@@ -12,6 +12,7 @@ header {
     position: sticky;
     top: 0;
     justify-content: space-between;
+    border-radius: 0 0 2em 2em;
     
     
     
@@ -19,6 +20,7 @@ header {
 
 .logo {
     padding-left: 1em;
+    
 }
 
 .logo a {
@@ -72,15 +74,12 @@ nav ul {
     padding: 0;
     align-items: center;
     font-weight: bold;
-   
-  
-    
-    
+     
 }
 
 nav ul li {
 
-            min-width: 6em;
+            min-width: 8em;
             text-align: center;
 }
 
@@ -94,11 +93,11 @@ nav ul a {
     background-repeat: no-repeat;
     background-position: left top;
     transition: all 300ms ease;
-    padding-top: 5px;
-    
-    
-    
+    padding-top: 1em;
+        
 }
+
+
 
 .mob-only {
     display: none;
@@ -110,8 +109,11 @@ nav ul a {
 
 
 
+
+
 .parent {
     position: relative;
+    cursor: pointer;
     
 }
 
@@ -129,12 +131,12 @@ nav ul a {
   box-shadow: 2px 2px 2px black;
   border-radius: 1em;
   width: 100%;
-  text-align: center;
   align-items: center;
-
-  
+    
   
 }
+
+
 
 
 
@@ -144,11 +146,24 @@ nav ul a {
     color: tomato;
 }
 
-
 .dropdown li {
-    padding-top: 25px;
     height: 100%;
 }
+
+
+
+
+
+.dropdown  li  a {
+    display: block;
+    height: 100%;
+    text-align: center;
+    padding-top: 2em;
+    
+    
+}
+
+
 
 
 
@@ -200,6 +215,10 @@ nav ul a {
         display: list-item;
         
         
+    }
+
+    .lrg-only { 
+        display: none;
     }
 
    
@@ -254,9 +273,25 @@ nav ul a {
         width: 100%;
         padding: 1em 0;
         min-width: 0px;
+        height: 100%;
         
         
         
+    }
+
+    nav ul li a {
+        
+       display: block;
+       
+        
+      
+        
+        
+        
+    }
+
+    .parent a {
+        pointer-events: none;
     }
 
     nav > ul li:nth-child(even) {
@@ -276,17 +311,16 @@ nav ul a {
        
     }
 
-  .dropdown li {
-      min-height: 18px;
-      padding: 16px;
-      
-  }
+    .dropdown li a{
+        padding: 0.25em;
+        
+    }
 
-   
+  
    #toggler:checked ~ nav {
         
         transform: translateX(0);
-        width: 250px;
+        width: 14em;
         position: relative;
         
         
