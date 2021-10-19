@@ -6,6 +6,13 @@ body {
     
 }
 
+#icon {
+    
+    bottom: 0.1em;
+    transition: ease 1s;
+    font-size: 16px;
+}
+
 header {
     background: #09ce9d;
     display: flex;
@@ -52,7 +59,7 @@ header {
     width: 3em;
     height: 7px;
     border-radius: 3px;
-    background-color: #cfd7e0;
+    background-color: tomato;
     margin-top: 8px;
     transition: transform 0.3s ease-in-out;
   }
@@ -172,6 +179,11 @@ nav ul a {
     transform: translateY(0);
     
     
+    
+  }
+
+  .parent:hover #icon {
+    transform: rotate(180deg)
   }
 
 /* Media Queries */
@@ -217,8 +229,11 @@ nav ul a {
         
     }
 
-    .lrg-only { 
-        display: none;
+    #icon {
+        
+        bottom: 0.8em;
+        transition: ease 1s;
+       
     }
 
    
@@ -293,6 +308,8 @@ nav ul a {
     .parent a {
         pointer-events: none;
     }
+
+   
 
     nav > ul li:nth-child(even) {
         background: #2c966d
