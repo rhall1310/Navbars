@@ -187,13 +187,13 @@ nav ul a {
     .active {
         background-position: left top;
         background-image: linear-gradient(90deg, rgb(241, 164, 21), red);
-        background-size: 100% 3px;    
+        background-size: 100% 5px;    
         
     }
     
     nav ul li:hover .menu-item{
         
-        background-size: 100% 3px;
+        background-size: 100% 5px;
         
        
         
@@ -331,8 +331,6 @@ nav ul a {
         font-size: 24px;
         
     }
-
- 
 
     
 }
