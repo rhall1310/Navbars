@@ -24,6 +24,7 @@ header {
     
     
     
+    
 }
 
 .logo {
@@ -39,9 +40,13 @@ header {
 }
 
 #toggler {
-   display: none;
+   position: absolute;
+   right: 1em;
+   top: 2em;
+   opacity: 0;      
          
 }
+
 
 .hamburger {
     position: absolute;
@@ -145,6 +150,7 @@ nav ul a {
 
 .dropdown li {
     height: 100%;
+    padding: 1em;
 }
 
 
@@ -162,7 +168,7 @@ nav ul a {
 
 
 .parent:hover .dropdown {
-    height: 6em;
+    height: 10em;
     transform: translateY(0);
     
     
@@ -180,12 +186,12 @@ nav ul a {
 
     .active {
         background-position: left top;
-        background-image: linear-gradient(90deg, white, red);
+        background-image: linear-gradient(90deg, rgb(241, 164, 21), red);
         background-size: 100% 3px;    
         
     }
     
-    .menu-item:hover {
+    nav ul li:hover .menu-item{
         
         background-size: 100% 3px;
         
@@ -286,6 +292,10 @@ nav ul a {
         color: tomato;
     }
 
+    .parent {
+        padding: 0.1em 0;
+    }
+
     .dropdown {
        position: relative;
        box-shadow: none;
@@ -299,6 +309,14 @@ nav ul a {
         
     }
 
+    .parent:hover .dropdown {
+        height: 8em;
+        transform: translateY(0);
+        
+        
+        
+      }
+
   
    #toggler:checked ~ nav {
         
@@ -306,6 +324,11 @@ nav ul a {
         width: 14em;
         position: relative;
         
+        
+    }
+
+    #icon {
+        font-size: 24px;
         
     }
 
