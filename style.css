@@ -8,9 +8,10 @@ body {
 
 #icon {
     
-    bottom: 0.1em;
+    
     transition: ease 1s;
-    font-size: 16px;
+    font-size: 14px;
+    
 }
 
 header {
@@ -106,18 +107,6 @@ nav ul a {
 
 
 
-.mob-only {
-    display: none;
-}
-
-
-
-
-
-
-
-
-
 .parent {
     position: relative;
     cursor: pointer;
@@ -165,23 +154,21 @@ nav ul a {
     display: block;
     height: 100%;
     text-align: center;
-    padding-top: 2em;
+    padding-top: 1em;
     
     
 }
 
 
-
-
-
 .parent:hover .dropdown {
-    height: 150px;
+    height: 6em;
     transform: translateY(0);
     
     
     
   }
 
+ 
   .parent:hover #icon {
     transform: rotate(180deg)
   }
@@ -204,6 +191,8 @@ nav ul a {
        
         
     }
+
+    
 }    
 
     
@@ -223,21 +212,7 @@ nav ul a {
         text-align: center;
     }
 
-    .mob-only {
-        display: list-item;
-        
-        
-    }
-
-    #icon {
-        
-        bottom: 0.8em;
-        transition: ease 1s;
-       
-    }
-
-   
-
+  
     .hamburger {
         visibility: visible;
     }
@@ -289,27 +264,17 @@ nav ul a {
         padding: 1em 0;
         min-width: 0px;
         height: 100%;
-        
-        
-        
+       
+                
     }
 
     nav ul li a {
         
        display: block;
-       
-        
-      
-        
-        
-        
+                     
     }
 
-    .parent a {
-        pointer-events: none;
-    }
-
-   
+    
 
     nav > ul li:nth-child(even) {
         background: #2c966d
